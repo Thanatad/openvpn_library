@@ -757,7 +757,7 @@ public class VpnProfile implements Serializable, Cloneable {
 
     public void writeConfigFile(Context context) throws IOException {
         FileWriter cfg = new FileWriter(VPNLaunchHelper.getConfigFilePath(context));
-        cfg.write(getConfigFile(context, true));
+        cfg.write(getConfigFile(context, false));
         cfg.flush();
         cfg.close();
 
